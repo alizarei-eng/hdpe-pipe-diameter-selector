@@ -1,25 +1,47 @@
 {
-  "schema_version": "1.0.0",
-  "database_id": "PE_PIPE_DIMENSIONS_INITIAL",
+  "schema_version": "1.1.0",
+  "database_id": "ISO4427_OD_16_3000_SDR11_PE80_PE100",
   "units": {
     "diameter": "mm",
     "wall_thickness": "mm"
   },
   "scope": {
-    "material": "PE100",
-    "standard_family": "ISO 4427",
-    "included_sdr": [11],
-    "included_od_range_mm": [32, 630],
-    "status": "initial_limited_dataset",
+    "material": [
+      "PE80",
+      "PE100"
+    ],
+    "standard_family": "ISO 4427-2",
+    "edition": "2019",
+    "included_sdr": [
+      11
+    ],
+    "included_od_range_mm": [
+      16,
+      3000
+    ],
+    "status": "expanded_reference_dataset_with_derived_large_size_wall_values",
     "limitations": [
-      "This is an initial SDR11 subset, not a complete ISO 4427 dimensional database.",
-      "Nominal wall thickness values are transcribed from a published BSI Kitemark product licence referring to ISO 4427-2:2007.",
-      "The source is a historical product licence and must not replace the current controlled standard or the selected manufacturer's datasheet for procurement or pressure design.",
-      "Mean outside-diameter tolerances, wall-thickness minimum/maximum tolerances, ovality, and product-specific availability are not yet included.",
-      "The database does not infer missing sizes or SDR combinations."
+      "Nominal outside diameter series is based on ISO 4427-2:2019 Table 1, including sizes through 3000 mm.",
+      "This release includes SDR 11 only. Other SDR series are not yet populated.",
+      "For OD sizes above 630 mm, nominal wall thickness is provisionally calculated as OD/SDR rounded to 0.1 mm; these values are not transcribed from a controlled copy of Table 2 and must be verified before design.",
+      "PE80 and PE100 at the same OD and SDR share the same nominal geometry; their pressure ratings differ because their MRS values differ.",
+      "The original PE100 SDR11 values from 32 to 630 mm are retained from a historical BSI product licence referring to ISO 4427-2:2007.",
+      "This dataset does not include all dimensional tolerances, minimum bore, ovality requirements, or manufacturer-specific availability.",
+      "For straight pipes with OD >= 900 mm, ISO 4427-2:2019 requires maximum out-of-roundness to be specified by agreement between manufacturer and end user.",
+      "Verify all nominal wall thicknesses and pressure ratings against the current controlled standard, amendments, and project specification before engineering release."
     ]
   },
   "sources": [
+    {
+      "source_id": "ISO4427_2019_TABLE1",
+      "title": "ISO 4427-2:2019, Table 1 — Mean outside diameters and out-of-roundness",
+      "publisher": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/72184.html",
+      "table": "Table 1, nominal outside diameter series through 3000 mm",
+      "edition": "ISO 4427-2:2019",
+      "source_type": "international_standard_reference",
+      "notes": "OD series and large-diameter ovality notes. Full controlled standard should be used for design verification."
+    },
     {
       "source_id": "BSI_KM546725_ISO4427_2007",
       "title": "BSI Kitemark Licence No. KM 546725 — ISO 4427-2:2007, PE100 pipe dimensions",
@@ -28,31 +50,769 @@
       "table": "Page 2 of 3, PE100 pipe dimensions, SDR 17 and SDR 11",
       "edition": "ISO 4427-2:2007",
       "source_type": "published_product_licence",
-      "notes": "Used only as an initial dimensional reference. Confirm against the current standard edition and actual manufacturer documentation before engineering release."
+      "notes": "Historical source retained for existing 32–630 mm SDR11 wall thickness entries."
     }
   ],
   "pipes": [
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":32,"sdr":11,"nominal_wall_thickness_mm":3.0,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":40,"sdr":11,"nominal_wall_thickness_mm":3.7,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":50,"sdr":11,"nominal_wall_thickness_mm":4.6,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":63,"sdr":11,"nominal_wall_thickness_mm":5.8,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":75,"sdr":11,"nominal_wall_thickness_mm":6.8,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":90,"sdr":11,"nominal_wall_thickness_mm":8.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":110,"sdr":11,"nominal_wall_thickness_mm":10.0,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":125,"sdr":11,"nominal_wall_thickness_mm":11.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":140,"sdr":11,"nominal_wall_thickness_mm":12.7,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":160,"sdr":11,"nominal_wall_thickness_mm":14.6,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":180,"sdr":11,"nominal_wall_thickness_mm":16.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":200,"sdr":11,"nominal_wall_thickness_mm":18.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":225,"sdr":11,"nominal_wall_thickness_mm":20.5,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":250,"sdr":11,"nominal_wall_thickness_mm":22.7,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":280,"sdr":11,"nominal_wall_thickness_mm":25.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":315,"sdr":11,"nominal_wall_thickness_mm":28.6,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":355,"sdr":11,"nominal_wall_thickness_mm":32.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":400,"sdr":11,"nominal_wall_thickness_mm":36.3,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":450,"sdr":11,"nominal_wall_thickness_mm":40.9,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":500,"sdr":11,"nominal_wall_thickness_mm":45.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":560,"sdr":11,"nominal_wall_thickness_mm":50.8,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
-    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":630,"sdr":11,"nominal_wall_thickness_mm":57.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"}
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 16,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 1.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 20,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 1.8,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 25,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 2.3,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 32,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 3,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 40,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 3.7,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 50,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 4.6,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 63,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 5.8,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 75,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 6.8,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 90,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 8.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 110,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 10,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 125,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 11.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 140,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 12.7,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 160,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 14.6,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 180,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 16.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 200,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 18.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 225,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 20.5,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 250,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 22.7,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 280,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 25.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 315,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 28.6,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 355,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 32.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 400,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 36.3,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 450,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 40.9,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 500,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 45.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 560,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 50.8,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 630,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 57.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "geometry_shared_from_sdr11"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 710,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 64.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 800,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 72.7,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 900,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 81.8,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 1000,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 90.9,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 1200,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 109.1,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 1400,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 127.3,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 1600,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 145.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 1800,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 163.6,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 2000,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 181.8,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 2250,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 204.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 2500,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 227.3,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 2800,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 254.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE80",
+      "dn_od_mm": 3000,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 272.7,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 16,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 1.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 20,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 1.8,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 25,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 2.3,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 32,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 3,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 40,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 3.7,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 50,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 4.6,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 63,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 5.8,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 75,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 6.8,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 90,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 8.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 110,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 10,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 125,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 11.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 140,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 12.7,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 160,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 14.6,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 180,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 16.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 200,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 18.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 225,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 20.5,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 250,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 22.7,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 280,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 25.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 315,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 28.6,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 355,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 32.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 400,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 36.3,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 450,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 40.9,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 500,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 45.4,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 560,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 50.8,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 630,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 57.2,
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "status": "historical_catalogue_transcribed"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 710,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 64.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 800,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 72.7,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 900,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 81.8,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 1000,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 90.9,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 1200,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 109.1,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 1400,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 127.3,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 1600,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 145.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 1800,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 163.6,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 2000,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 181.8,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 2250,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 204.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 2500,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 227.3,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 2800,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 254.5,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    },
+    {
+      "standard_family": "ISO 4427",
+      "edition": "2019",
+      "material_grade": "PE100",
+      "dn_od_mm": 3000,
+      "sdr": 11,
+      "nominal_wall_thickness_mm": 272.7,
+      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
+      "status": "calculated_from_sdr_ratio_verify_before_design"
+    }
   ]
 }
