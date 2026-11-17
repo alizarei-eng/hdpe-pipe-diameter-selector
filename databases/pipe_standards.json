@@ -58,16 +58,6 @@
       "standard_family": "ISO 4427",
       "edition": "2019",
       "material_grade": "PE80",
-      "dn_od_mm": 16,
-      "sdr": 11,
-      "nominal_wall_thickness_mm": 1.5,
-      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
-      "status": "calculated_from_sdr_ratio_verify_before_design"
-    },
-    {
-      "standard_family": "ISO 4427",
-      "edition": "2019",
-      "material_grade": "PE80",
       "dn_od_mm": 20,
       "sdr": 11,
       "nominal_wall_thickness_mm": 1.8,
@@ -431,16 +421,6 @@
       "dn_od_mm": 3000,
       "sdr": 11,
       "nominal_wall_thickness_mm": 272.7,
-      "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
-      "status": "calculated_from_sdr_ratio_verify_before_design"
-    },
-    {
-      "standard_family": "ISO 4427",
-      "edition": "2019",
-      "material_grade": "PE100",
-      "dn_od_mm": 16,
-      "sdr": 11,
-      "nominal_wall_thickness_mm": 1.5,
       "source_id": "ISO4427_2019_SDR_RATIO_DERIVED",
       "status": "calculated_from_sdr_ratio_verify_before_design"
     },
