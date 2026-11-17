@@ -1,9 +1,16 @@
 import unittest
-from core.pipe_database import (PipeDatabaseError, list_available_pipes,
-                                list_available_sdrs)
+from core.pipe_database import (PipeDatabaseError, list_available_material_grades,
+                                list_available_pipes, list_available_sdrs)
 from core.pipe_sizing import recommend_pipe_diameter
 
 class TestPipeSizing(unittest.TestCase):
+    def test_material_grade_menu_matches_database(self):
+        self.assertEqual(list_available_material_grades(), ["PE100", "PE80"])
+
+    def test_grade_specific_sdr_menus_match_database(self):
+        self.assertEqual(list_available_sdrs("PE100"), [7.4, 9.0, 11.0, 13.6, 17.0, 21.0, 26.0, 33.0, 41.0])
+        self.assertEqual(list_available_sdrs("PE80"), [6.0, 7.4, 9.0, 11.0, 13.6, 17.0, 21.0, 26.0, 33.0, 41.0])
+
     def test_selects_smallest_size_not_exceeding_target(self):
         result = recommend_pipe_diameter(flow_rate_m3_h=50, target_velocity_m_s=1.5)
         selected = result["recommended_pipe"]
