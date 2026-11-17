@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "database_id": "PE_PIPE_DIMENSIONS_INITIAL",
+  "units": {
+    "diameter": "mm",
+    "wall_thickness": "mm"
+  },
+  "scope": {
+    "material": "PE100",
+    "standard_family": "ISO 4427",
+    "included_sdr": [11],
+    "included_od_range_mm": [32, 630],
+    "status": "initial_limited_dataset",
+    "limitations": [
+      "This is an initial SDR11 subset, not a complete ISO 4427 dimensional database.",
+      "Nominal wall thickness values are transcribed from a published BSI Kitemark product licence referring to ISO 4427-2:2007.",
+      "The source is a historical product licence and must not replace the current controlled standard or the selected manufacturer's datasheet for procurement or pressure design.",
+      "Mean outside-diameter tolerances, wall-thickness minimum/maximum tolerances, ovality, and product-specific availability are not yet included.",
+      "The database does not infer missing sizes or SDR combinations."
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "BSI_KM546725_ISO4427_2007",
+      "title": "BSI Kitemark Licence No. KM 546725 — ISO 4427-2:2007, PE100 pipe dimensions",
+      "publisher": "BSI Assurance UK Limited",
+      "url": "https://tsscgroup.com/wp-content/uploads/2017/09/KM-ISO-4427.pdf",
+      "table": "Page 2 of 3, PE100 pipe dimensions, SDR 17 and SDR 11",
+      "edition": "ISO 4427-2:2007",
+      "source_type": "published_product_licence",
+      "notes": "Used only as an initial dimensional reference. Confirm against the current standard edition and actual manufacturer documentation before engineering release."
+    }
+  ],
+  "pipes": [
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":32,"sdr":11,"nominal_wall_thickness_mm":3.0,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":40,"sdr":11,"nominal_wall_thickness_mm":3.7,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":50,"sdr":11,"nominal_wall_thickness_mm":4.6,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":63,"sdr":11,"nominal_wall_thickness_mm":5.8,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":75,"sdr":11,"nominal_wall_thickness_mm":6.8,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":90,"sdr":11,"nominal_wall_thickness_mm":8.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":110,"sdr":11,"nominal_wall_thickness_mm":10.0,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":125,"sdr":11,"nominal_wall_thickness_mm":11.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":140,"sdr":11,"nominal_wall_thickness_mm":12.7,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":160,"sdr":11,"nominal_wall_thickness_mm":14.6,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":180,"sdr":11,"nominal_wall_thickness_mm":16.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":200,"sdr":11,"nominal_wall_thickness_mm":18.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":225,"sdr":11,"nominal_wall_thickness_mm":20.5,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":250,"sdr":11,"nominal_wall_thickness_mm":22.7,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":280,"sdr":11,"nominal_wall_thickness_mm":25.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":315,"sdr":11,"nominal_wall_thickness_mm":28.6,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":355,"sdr":11,"nominal_wall_thickness_mm":32.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":400,"sdr":11,"nominal_wall_thickness_mm":36.3,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":450,"sdr":11,"nominal_wall_thickness_mm":40.9,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":500,"sdr":11,"nominal_wall_thickness_mm":45.4,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":560,"sdr":11,"nominal_wall_thickness_mm":50.8,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"},
+    {"standard_family":"ISO 4427","edition":"2007","material_grade":"PE100","dn_od_mm":630,"sdr":11,"nominal_wall_thickness_mm":57.2,"source_id":"BSI_KM546725_ISO4427_2007","status":"catalogue_transcribed"}
+  ]
+}
