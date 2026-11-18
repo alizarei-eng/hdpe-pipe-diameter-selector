@@ -29,7 +29,3 @@ python -m unittest discover -s tests -v
 The pipe recommendation remains based on flow rate, target velocity, grade, SDR and catalogue geometry. Fluid properties do not change the velocity calculation for a specified volumetric flow and pipe bore. EC-based fluid properties are displayed for continuity with the hydraulic projects, not used to select the diameter.
 
 EC-to-TDS factor is approximate and depends on ionic composition. EC alone cannot identify individual ion concentrations. The optional seawater ionic profile is not applied to groundwater or RO concentrate without laboratory confirmation.
-
-## Hydraulic calculations
-- Elevation input and static-head calculation are documented in `docs/USER_GUIDE.md` (Group 4).
-- The CLI accepts either a direct elevation difference or separate start/end elevations. Static head is reported as `z_end - z_start`; this is not the complete pump TDH.
