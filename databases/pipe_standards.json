@@ -63,7 +63,8 @@
       "The SDR11 OD 20 mm wall is corrected to the 2.0 mm Table 2 minimum reference.",
       "PN values are reference values at the standard reference conditions; temperature derating, design coefficient and project requirements must be checked.",
       "For OD >= 900 mm, maximum out-of-roundness requirements need special agreement/checking.",
-      "This dataset does not include full e_max tolerances, minimum bore, ovality, manufacturer availability or all national deviations."
+      "This dataset does not include full e_max tolerances, minimum bore, ovality, manufacturer availability or all national deviations.",
+      "Manufacturer-specific PE100 catalogue records are stored separately in databases/manufacturer_catalogues/gf_pe100_water_2022.json; they must not be interpreted as universal ISO availability or substituted for controlled standard dimensions."
     ]
   },
   "sources": [
@@ -106,6 +107,26 @@
       "edition": "2023 national adoption of ISO 4427-2:2019 with national modifications",
       "source_type": "national_adoption_reference",
       "notes": "Used as an accessible cross-reference for dimensional series; national modifications are not identical to ISO in every clause."
+    },
+    {
+      "source_id": "GF_UTILITY_SYSTEMS_2022",
+      "title": "PE Product Range — Utility Systems",
+      "publisher": "GF Piping Systems Indonesia / PT Georg Fischer Indonesia",
+      "url": "https://www.gfps.com/content/dam/gfps/id/product-ranges/gfps-id-product-range-utility-systems-en.pdf",
+      "table": "Pages 7–9: PE100 water supply SDR 7.4, 9, 11, 13.6, 17, 21 and 26; OD tolerances, out-of-roundness, minimum wall thickness and average mass",
+      "edition": "Catalogue revision 07.22",
+      "source_type": "manufacturer_catalogue",
+      "notes": "Transcribed into separate file databases/manufacturer_catalogues/gf_pe100_water_2022.json. Manufacturer-specific catalogue evidence, not a universal market-availability statement."
+    },
+    {
+      "source_id": "NEPROPLAST_HDPE_CATALOGUE",
+      "title": "HDPE Water, Gas & Sewage System",
+      "publisher": "New Products Industries Co. Ltd. (NEPROPLAST)",
+      "url": "https://neproplast.com/wp-content/uploads/2025/10/HDPE.pdf",
+      "table": "Page 8 onward: PE100 pipe dimensions and weights by SDR",
+      "edition": "Published catalogue PDF",
+      "source_type": "manufacturer_catalogue",
+      "notes": "Independent manufacturer cross-check; values are not merged into the GF catalogue dataset or treated as universal standard values."
     }
   ],
   "pipes": [
