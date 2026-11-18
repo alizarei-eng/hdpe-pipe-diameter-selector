@@ -8,6 +8,7 @@ from core.pipe_database import (
 )
 from core.pipe_sizing import recommend_pipe_diameter
 from core.fluid_properties import estimate_from_ec
+from core.elevation import calculate_static_head
 
 
 def read_positive_float(prompt: str) -> float:
@@ -102,6 +103,57 @@ def main() -> None:
     for item in result["ranked_alternatives"]:
         status = "YES" if item["within_target"] else "NO"
         print(f"{item['dn_od_mm']:>9.0f} {item['nominal_internal_diameter_mm']:>10.1f} {item['velocity_m_s']:>17.3f} {item['nominal_pressure_bar']:>10} {status:>14}")
+
+    print("\n--- GROUP 4: ELEVATION / STATIC HEAD ---")
+    print("Choose elevation input method:")
+    print("  1) Enter elevation difference directly (destination - start)")
+    print("  2) Enter start and destination elevations")
+    while True:
+        elevation_method = input("Enter 1 or 2: ").strip()
+        if elevation_method in ("1", "2"):
+            break
+        print("Invalid selection. Enter 1 or 2.")
+
+    def read_signed_finite_float(prompt: str) -> float:
+        while True:
+            try:
+                value = float(input(prompt).strip().replace(",", "."))
+                if value == value and value not in (float("inf"), float("-inf")):
+                    return value
+            except ValueError:
+                pass
+            print("Invalid input. Please enter a finite number.")
+
+    if elevation_method == "1":
+        static_head = read_signed_finite_float(
+            "Elevation difference Δz (m; positive uphill, negative downhill): "
+        )
+        elevation_start = 0.0
+        elevation_end = static_head
+        method_label = "Direct elevation difference"
+    else:
+        print("Enter both elevations relative to the SAME vertical datum.")
+        elevation_start = read_signed_finite_float("Start elevation z1 (m): ")
+        elevation_end = read_signed_finite_float("Destination elevation z2 (m): ")
+        static_head = calculate_static_head(
+            elevation_start_m=elevation_start,
+            elevation_end_m=elevation_end,
+        )
+        method_label = "Start/end elevations"
+
+    print(f"Input method            : {method_label}")
+    if elevation_method == "2":
+        print(f"Start elevation z1      : {elevation_start:.3f} m")
+        print(f"Destination elevation z2: {elevation_end:.3f} m")
+    print(f"Static head (Δz)        : {static_head:+.3f} m")
+    if static_head > 0:
+        print("Elevation effect        : Uphill; adds to required pump head.")
+    elif static_head < 0:
+        print("Elevation effect        : Downhill; assists flow and reduces required pump head.")
+    else:
+        print("Elevation effect        : No net elevation difference.")
+    print("Note: static head only; friction/minor losses and pressure-head differences are not included.")
+
     print("\nEngineering limitations:")
     for note in result["limitations"]:
         print(f"- {note}")
