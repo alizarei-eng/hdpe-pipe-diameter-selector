@@ -775,7 +775,7 @@
       "pressure_rating_bar": 16,
       "main_diameter_mm": 32,
       "branch_diameter_mm": 20,
-      "product_code": "300 220 952",
+      "product_code": null,
       "dimensions_mm": {
         "outlet_diameter": 20,
         "H": 94,
