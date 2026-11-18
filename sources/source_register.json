@@ -73,6 +73,14 @@
       "title": "PE Systems — Water Utility",
       "url": "https://www.gfps.com/content/dam/gfps/in/product-ranges/gf-in-catalog-pe-systems-water-utility-en.pdf",
       "scope": "Manufacturer-specific PE100 electrofusion couplers, 90-degree elbows, equal tees, reducers and monoline tapping saddles; catalogue pages 14–20. Product data is not a universal standard or local-stock guarantee."
+    },
+    {
+      "source_id": "LEGACY_PIPE_PRESSURE_LOSS_FITTINGS",
+      "type": "internal_project_dataset",
+      "publisher": "User's Pipe Pressure Loss Calculator repository",
+      "title": "Legacy hydraulic fittings reference — databases/fittings.json",
+      "url": "https://github.com/alizarei-eng/pipe-pressure-loss-calculator/blob/main/databases/fittings.json",
+      "scope": "Transferred 11 generic K-value references for elbows, tee straight/branch paths, valves, pipe entrance and exit. Values are approximate legacy screening data, not manufacturer-certified coefficients."
     }
   ],
   "data_policy": [
@@ -81,6 +89,8 @@
     "PN/MOP is not a universal pressure guarantee: temperature, design coefficient, fluid, surge, service life and applicable standard must be checked.",
     "Manufacturer product range does not establish local market stock or availability.",
     "Fitting dimensions, pressure ratings and product codes are stored in manufacturer-specific datasets and must not be inferred from pipe OD/SDR tables.",
-    "A fitting's pressure class and compatible pipe SDR are product-specific; verify the exact manufacturer's data sheet, fusion compatibility and project design conditions."
+    "A fitting's pressure class and compatible pipe SDR are product-specific; verify the exact manufacturer's data sheet, fusion compatibility and project design conditions.",
+    "Generic hydraulic K-value references are stored separately from manufacturer-specific fitting dimensions and product ratings.",
+    "Tee K values must be selected for the actual flow path (straight run or branch); do not combine both for one path."
   ]
 }
