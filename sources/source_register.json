@@ -57,12 +57,30 @@
       "title": "HDPE Water, Gas & Sewage System",
       "url": "https://neproplast.com/wp-content/uploads/2025/10/HDPE.pdf",
       "scope": "Manufacturer-specific PE100 dimensions, mass and pressure classifications; Table 5.1 and following table. Useful independent cross-check; not merged into the GF dataset."
+    },
+    {
+      "source_id": "ISO_4427_3_2019",
+      "type": "international_standard",
+      "publisher": "International Organization for Standardization",
+      "title": "ISO 4427-3:2019 — Plastics piping systems for water supply and for drainage and sewerage under pressure — PE — Part 3: Fittings",
+      "url": "https://committee.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/21/72185.html?browse=ics",
+      "scope": "Requirements and test parameters for PE fittings including fusion, mechanical and fabricated fittings. The current revision status must be checked; manufacturer catalogue data is not a substitute for the controlled standard."
+    },
+    {
+      "source_id": "GF_PE_SYSTEMS_WATER_UTILITY_INDIA",
+      "type": "manufacturer_catalogue",
+      "publisher": "GF Piping Systems India",
+      "title": "PE Systems — Water Utility",
+      "url": "https://www.gfps.com/content/dam/gfps/in/product-ranges/gf-in-catalog-pe-systems-water-utility-en.pdf",
+      "scope": "Manufacturer-specific PE100 electrofusion couplers, 90-degree elbows, equal tees, reducers and monoline tapping saddles; catalogue pages 14–20. Product data is not a universal standard or local-stock guarantee."
     }
   ],
   "data_policy": [
     "Generic ISO reference records and manufacturer-specific catalogue records are stored separately.",
     "Every pipe record must identify whether its dimensions are directly transcribed, standard-derived, or calculated.",
     "PN/MOP is not a universal pressure guarantee: temperature, design coefficient, fluid, surge, service life and applicable standard must be checked.",
-    "Manufacturer product range does not establish local market stock or availability."
+    "Manufacturer product range does not establish local market stock or availability.",
+    "Fitting dimensions, pressure ratings and product codes are stored in manufacturer-specific datasets and must not be inferred from pipe OD/SDR tables.",
+    "A fitting's pressure class and compatible pipe SDR are product-specific; verify the exact manufacturer's data sheet, fusion compatibility and project design conditions."
   ]
 }
