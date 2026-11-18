@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "LEGACY_HYDRAULIC_FITTINGS_REFERENCE",
+  "description": "Transferred from the user's Pipe Pressure Loss Calculator repository. This is a hydraulic minor-loss reference list, not a dimensional or manufacturer product catalogue.",
+  "units": {
+    "loss_coefficient": "dimensionless"
+  },
+  "provenance": {
+    "repository": "https://github.com/alizarei-eng/pipe-pressure-loss-calculator",
+    "source_file": "databases/fittings.json",
+    "source_blob_sha": "15a5d6dcd10bc56d4d8450bb44fcf1ec50b1a8fe",
+    "transfer_status": "copied_from_existing_project",
+    "notes": [
+      "K values are approximate legacy reference values copied without changing their numerical values.",
+      "Values depend on fitting geometry, radius, branching configuration, Reynolds number, installation and manufacturer.",
+      "These K values must not be interpreted as certified values for the GF products in the manufacturer catalogue.",
+      "For final design, use manufacturer test data or a recognized hydraulic reference."
+    ]
+  },
+  "fittings": [
+    {
+      "id": 1,
+      "name": "90-degree elbow - long radius",
+      "fitting_type": "elbow_90_long_radius",
+      "k": 0.2,
+      "flow_path": "through",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 2,
+      "name": "90-degree elbow - standard",
+      "fitting_type": "elbow_90_standard",
+      "k": 0.9,
+      "flow_path": "through",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 3,
+      "name": "45-degree elbow",
+      "fitting_type": "elbow_45",
+      "k": 0.4,
+      "flow_path": "through",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 4,
+      "name": "Tee - straight run",
+      "fitting_type": "tee",
+      "k": 0.6,
+      "flow_path": "straight_run",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 5,
+      "name": "Tee - branch flow",
+      "fitting_type": "tee",
+      "k": 1.8,
+      "flow_path": "branch_flow",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 6,
+      "name": "Gate valve - fully open",
+      "fitting_type": "gate_valve",
+      "k": 0.15,
+      "flow_path": "through",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 7,
+      "name": "Ball valve - fully open",
+      "fitting_type": "ball_valve",
+      "k": 0.05,
+      "flow_path": "through",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 8,
+      "name": "Globe valve - fully open",
+      "fitting_type": "globe_valve",
+      "k": 10,
+      "flow_path": "through",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 9,
+      "name": "Swing check valve",
+      "fitting_type": "swing_check_valve",
+      "k": 2,
+      "flow_path": "through",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 10,
+      "name": "Sharp-edged pipe entrance",
+      "fitting_type": "sharp_edged_entrance",
+      "k": 0.5,
+      "flow_path": "entrance",
+      "geometry_status": "generic_reference"
+    },
+    {
+      "id": 11,
+      "name": "Pipe exit into large tank",
+      "fitting_type": "pipe_exit_large_tank",
+      "k": 1,
+      "flow_path": "exit",
+      "geometry_status": "generic_reference"
+    }
+  ],
+  "usage_rules": [
+    "For a tee, select the K value corresponding to the actual flow path: straight run or branch flow.",
+    "Do not add both tee K values for one flow path.",
+    "Do not use a single K value for a reducing tee, lateral tee or fabricated manifold without supporting data.",
+    "The dataset is useful for preliminary hydraulic screening; it is not used to select pipe diameter or fitting dimensions."
+  ]
+}
