@@ -12,10 +12,11 @@ Velocity-based selection of a documented HDPE catalogue size.
 ## Pipe data sources
 - Generic ISO reference dataset: `databases/pipe_standards.json`.
 - Manufacturer-specific GF PE100 water-pipe catalogue data (OD tolerances, ovality, minimum wall and average mass): `databases/manufacturer_catalogues/gf_pe100_water_2022.json`.
+- Manufacturer-specific GF PE100 water-fitting catalogue data (electrofusion couplers, elbows, tees, reducers and tapping saddles): `databases/manufacturer_catalogues/gf_pe100_water_fittings_2022.json`.
 - Source register: `sources/source_register.json`.
 - Data interpretation and engineering limitations: `docs/PIPE_DATA_SOURCES_FA.md`.
 
-Manufacturer catalogue data is kept separate from the generic standard dataset. Missing catalogue combinations are not treated as zero or as universally unavailable. PN is referenced at 20°C and must be checked for temperature derating and project conditions.
+Pipe and fitting manufacturer catalogue data are kept separate from generic standard datasets. Missing catalogue combinations are not treated as zero or as universally unavailable. PN is referenced at 20°C and must be checked for temperature derating and project conditions.
 
 ## Run
 ```bash
