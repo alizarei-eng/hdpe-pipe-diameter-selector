@@ -60,3 +60,20 @@ Run from the repository root:
 python -m unittest discover -s tests -v
 ```
 Tests validate implemented software logic; they do not certify a manufacturer's product or replace engineering review.
+
+## 14. Suitable applications and decision boundary | موارد کاربرد و مرز استفاده
+**EN:** Use this program when the question is: “For this one design flow, which available PE grade/SDR/OD gives an average velocity no higher than my selected target?” It is particularly useful for comparing catalogue sizes before detailed design.
+
+**FA:** زمانی از برنامه استفاده کنید که سؤال این باشد: «برای این دبی طراحی، کدام ترکیب گرید PE، SDR و OD موجود، سرعت متوسطی کمتر یا مساوی سرعت هدف ایجاد می‌کند؟» این ابزار برای مقایسه سایزهای کاتالوگی پیش از طراحی تفصیلی مناسب است.
+
+**Example | مثال:** For Q=50 m³/h and Vtarget=1.50 m/s, the theoretical minimum ID is about 108.6 mm. The catalogue selector then checks the available OD records for the selected grade and SDR and returns the smallest compliant record. This does not prove that the selected pipe has sufficient pressure rating or acceptable total system head.
+
+**FA:** برای دبی ۵۰ مترمکعب بر ساعت و سرعت هدف ۱٫۵۰ متر بر ثانیه، قطر داخلی نظری حداقل حدود ۱۰۸٫۶ میلی‌متر است. برنامه رکوردهای موجود گرید و SDR انتخابی را بررسی و کوچک‌ترین گزینه منطبق را برمی‌گرداند. این نتیجه به‌تنهایی کافی بودن کلاس فشار یا مناسب بودن هد کل سیستم را ثابت نمی‌کند.
+
+**Use another calculation or split the problem when | در شرایط زیر محاسبه تکمیلی یا تفکیک مسئله لازم است:**
+- The pipeline contains multiple sections with different diameters, flow rates or materials. | خط شامل چند بخش با قطر، دبی یا جنس متفاوت است.
+- A branched network divides or combines flow. | شبکه انشعابی است و دبی در گره‌ها تقسیم یا ترکیب می‌شود.
+- Pressure loss, pump head, energy, transient surge or pressure rating is a design requirement. | افت فشار، هد پمپ، انرژی، ضربه قوچ یا تأیید فشار طراحی لازم است.
+- The exact product dimensions or allowable pressure must be contractually verified. | ابعاد دقیق محصول یا فشار مجاز باید از نظر قراردادی تأیید شود.
+
+For a multi-section line, use the selector separately for each segment using that segment's design flow and target velocity, then verify the complete system with a hydraulic model. Do not treat a velocity-based diameter recommendation as a complete pipeline design.
