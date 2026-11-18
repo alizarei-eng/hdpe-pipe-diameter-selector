@@ -1,24 +1,18 @@
-# HDPE Pipe Diameter Selector | انتخاب‌گر قطر لوله HDPE
+# HDPE Pipe Diameter Selector
 
-**FA — فارسی:** ابزار انتخاب اولیه قطر اسمی لوله پلی‌اتیلن بر اساس دبی، سرعت هدف، گرید PE و SDR، با استفاده از بانک ابعادی مستند.
+## فارسی
 
-**EN — English:** A preliminary HDPE pipe-size selection tool based on flow rate, target velocity, PE grade, SDR, and a documented dimensional database.
+### معرفی
+این ابزار برای انتخاب اولیه قطر لوله پلی‌اتیلن بر اساس دبی طراحی و سرعت متوسط هدف ساخته شده است. کاربر گرید PE80 یا PE100 و SDR موجود را انتخاب می‌کند؛ برنامه ضخامت اسمی را از بانک می‌خواند، قطر داخلی را محاسبه می‌کند و کوچک‌ترین OD منطبق با سرعت هدف را پیشنهاد می‌دهد.
 
-## Purpose | هدف
-- **FA:** دبی و سرعت هدف را دریافت می‌کند؛ گرید و SDR از فهرست انتخاب می‌شوند؛ سپس کوچک‌ترین OD موجود را انتخاب می‌کند که سرعت محاسبه‌شده آن از سرعت هدف بیشتر نباشد.
-- **EN:** The tool accepts flow and target velocity, lets the user select a PE grade and SDR, and selects the smallest available outside diameter whose calculated velocity does not exceed the target.
+### قابلیت‌ها
+- انتخاب گرید و SDR از گزینه‌های موجود در بانک
+- محاسبه ID از OD و ضخامت اسمی
+- محاسبه سرعت متوسط برای سایزهای کاتالوگی
+- نمایش سایز پیشنهادی و گزینه‌های جایگزین
+- تخمین غربالگری برخی خواص سیال بر اساس EC
 
-## Features | قابلیت‌ها
-- PE80 and PE100 grade menus | انتخاب گرید PE80 و PE100
-- Grade-specific SDR options | نمایش SDRهای موجود برای هر گرید
-- OD, nominal wall thickness and calculated nominal ID | قطر خارجی، ضخامت اسمی و محاسبه قطر داخلی
-- Recommended catalogue size and ranked alternatives | سایز پیشنهادی و جدول گزینه‌های جایگزین
-- Optional EC-based screening estimates for TDS, density and viscosity | تخمین غربالگری TDS، چگالی و ویسکوزیته از EC
-- Manufacturer-specific pipe and fitting catalogue datasets | بانک کاتالوگ اختصاصی لوله و اتصالات سازنده
-
-## Installation and run | نصب و اجرا
-Python 3.10 or newer is recommended. No third-party package is required for the core selector.
-
+### نصب و اجرا
 ```bash
 git clone https://github.com/alizarei-eng/hdpe-pipe-diameter-selector.git
 cd hdpe-pipe-diameter-selector
@@ -26,84 +20,62 @@ python main.py
 python -m unittest discover -s tests -v
 ```
 
-## Input workflow | ترتیب ورود اطلاعات
-1. **Flow rate (m³/h) | دبی:** enter a positive volumetric flow rate.
-2. **Target velocity (m/s) | سرعت هدف:** enter the maximum preferred average velocity.
-3. **EC (mS/cm) and water temperature (°C) | EC و دمای آب:** optional fluid-property screening inputs in the current CLI; EC must already be compensated to 25°C.
-4. **PE grade | گرید:** select PE80 or PE100 from the available menu.
-5. **SDR | نسبت ابعادی:** select only an SDR available for the selected grade.
-6. **Results | نتایج:** review the recommended pipe and all catalogue alternatives.
+### روش محاسبه
+`Q_s=Q_h/3600`
+`ID=OD-2e`
+`A=πID²/4`
+`V=Q_s/A`
 
-## Calculation method | روش محاسبه
-`Q_s = Q_h / 3600`
+### مثال
+برای Q=50 m³/h و سرعت هدف 1.50 m/s، قطر داخلی نظری حداقل حدود 108.6 mm است. در مثال کاتالوگی PE100 SDR11، OD125 با ضخامت تقریبی 11.4 mm سرعت حدود 1.69 m/s می‌دهد و مناسب نیست؛ OD140 با ضخامت تقریبی 12.7 mm سرعت حدود 1.35 m/s می‌دهد و شرط را برآورده می‌کند. انتخاب نهایی تابع رکوردهای واقعی بانک است.
 
-`ID = OD - 2e`
+### موارد کاربرد
+- سایزینگ اولیه یک بخش لوله با دبی مشخص
+- مقایسه گرید، SDR و ODهای موجود
+- تهیه فهرست گزینه‌ها برای بررسی هیدرولیکی و اقتصادی بعدی
 
-`A = π ID² / 4`
+### محدودیت‌ها
+این برنامه افت فشار، TDH، توان پمپ، ضربه قوچ، فشار مجاز در دمای کارکرد، بارهای سازه‌ای، دفن، روش اتصال یا موجودی بازار را بررسی نمی‌کند. مسیر چندقطری و شبکه شاخه‌دار را نیز مدل نمی‌کند. بعضی ضخامت‌های بانک عمومی تخمینی یا نسبت‌محورند و باید با استاندارد کنترل‌شده یا کاتالوگ سازنده تطبیق داده شوند.
 
-`V = Q_s / A`
+راهنمای تفصیلی در پوشه docs قرار دارد.
 
-Here, OD and wall thickness e are in metres in the area calculation. The selector chooses the smallest catalogue OD satisfying V ≤ Vtarget. If no size meets the target, it reports the largest available size and raises a warning.
+---
 
-در این روابط، قطر و ضخامت در محاسبه سطح مقطع بر حسب متر هستند. برنامه کوچک‌ترین قطر خارجی موجود را انتخاب می‌کند که شرط سرعت را برآورده کند. اگر هیچ سایزی مناسب نباشد، بزرگ‌ترین سایز موجود همراه هشدار نمایش داده می‌شود.
+## English
 
-## Worked example | مثال کامل
-**Inputs | ورودی‌ها**
-- Flow rate = 50 m³/h
-- Target velocity = 1.50 m/s
-- Grade = PE100
-- SDR = 11
+### Overview
+This tool performs preliminary HDPE pipe sizing based on design flow and target average velocity. The user selects PE80 or PE100 and an available SDR. The program reads nominal wall thickness from its database, calculates internal diameter and recommends the smallest outside diameter that satisfies the velocity target.
 
-Required internal diameter from the target velocity:
+### Features
+- Grade and SDR selection from available database records
+- Internal-diameter calculation from OD and nominal wall thickness
+- Average-velocity calculation for catalogue sizes
+- Recommended size and alternative options
+- EC-based screening estimates for selected fluid properties
 
-`Q = 50/3600 = 0.013889 m³/s`
+### Installation and run
+```bash
+git clone https://github.com/alizarei-eng/hdpe-pipe-diameter-selector.git
+cd hdpe-pipe-diameter-selector
+python main.py
+python -m unittest discover -s tests -v
+```
 
-`A_required = Q/V = 0.009259 m²`
+### Calculation method
+`Q_s=Q_h/3600`
+`ID=OD-2e`
+`A=πID²/4`
+`V=Q_s/A`
 
-`ID_required = √(4A/π) ≈ 108.6 mm`
+### Worked example
+For Q=50 m³/h and target velocity 1.50 m/s, the theoretical minimum internal diameter is approximately 108.6 mm. In an illustrative PE100 SDR11 catalogue example, OD125 with nominal wall thickness near 11.4 mm gives velocity near 1.69 m/s and does not comply; OD140 with wall thickness near 12.7 mm gives velocity near 1.35 m/s and complies. The actual recommendation depends on the database records.
 
-For illustration, a PE100 SDR11 catalogue record at OD 125 mm has a nominal wall near 11.4 mm, giving ID ≈ 102.2 mm and velocity ≈ 1.69 m/s: it does not meet the target. An OD 140 mm record with nominal wall near 12.7 mm gives ID ≈ 114.6 mm and velocity ≈ 1.35 m/s: it meets the target. The program selects the smallest compliant available record in its actual database.
+### Suitable applications
+- Preliminary sizing of one pipe segment at a specified flow
+- Comparing available grades, SDRs and outside diameters
+- Preparing a shortlist for subsequent hydraulic and economic review
 
-**تفسیر فارسی:** قطر داخلی لازم حدود ۱۰۸٫۶ میلی‌متر است. سایز OD125 در این مثال سرعتی بالاتر از هدف می‌دهد؛ OD140 سرعتی حدود ۱٫۳۵ متر بر ثانیه دارد و شرط را برآورده می‌کند. خروجی واقعی دقیقاً تابع رکوردهای موجود در بانک برنامه است.
+### Limitations
+The program does not calculate pressure loss, TDH, pump power, water hammer, pressure rating at operating temperature, structural loads, burial, joining method or market availability. It does not model multi-diameter routes or branched networks. Some generic wall-thickness records are estimated or ratio-derived and must be verified against the controlled standard or manufacturer's catalogue.
 
-## Fluid-property estimate | تخمین خواص سیال
-EC-based TDS, density and viscosity are screening estimates only. EC alone cannot determine individual ion concentrations. The optional natural-seawater profile assumes standard seawater ionic ratios and must not be applied to groundwater or RO concentrate without laboratory confirmation.
-
-تخمین خواص از EC صرفاً برای غربالگری است. EC به‌تنهایی غلظت یون‌های منفرد را مشخص نمی‌کند. پروفایل آب دریای طبیعی نیز بر اساس نسبت‌های استاندارد فرضی است و بدون آزمایش نباید برای آب زیرزمینی یا کنسانتره RO استفاده شود.
-
-## Data sources and limitations | منابع داده و محدودیت‌ها
-- Generic dimensions: `databases/pipe_standards.json`.
-- Manufacturer-specific GF PE100 water pipe and fittings: `databases/manufacturer_catalogues/`.
-- Hydraulic fitting K references: `databases/hydraulic_fittings.json`.
-- Source register: `sources/source_register.json`.
-
-Nominal ID is calculated from nominal OD and wall thickness; actual bore varies with manufacturing tolerances. Some generic wall values are ratio-derived estimates and must be verified against a controlled standard or the selected manufacturer's datasheet. PN is a reference at its stated basis and does not include project-specific temperature derating or design factors. This tool does not calculate pressure loss, pump duty, water hammer, structural loads, chemical compatibility or stock availability.
-
-قطر داخلی محاسباتی اسمی است و تلرانس ساخت را لحاظ نمی‌کند. بخشی از ضخامت‌ها تخمینی/نسبت‌محورند و باید با استاندارد کنترل‌شده یا کاتالوگ سازنده تطبیق داده شوند. PN مرجع است و اثر دما و ضرایب طراحی پروژه را لحاظ نمی‌کند. این ابزار افت فشار، نقطه کار پمپ، ضربه قوچ، بارهای سازه‌ای، سازگاری شیمیایی یا موجودی بازار را محاسبه نمی‌کند.
-
-## Documentation | مستندات
-See [the bilingual engineering guide](docs/ENGINEERING_GUIDE_FA_EN.md) and the supporting documents in `docs/`.
-
-راهنمای جامع دوزبانه و فایل‌های آموزشی تکمیلی در پوشه `docs` قرار دارند.
-
-## Suitable applications | موارد کاربرد مناسب
-- **EN:** Preliminary selection of one HDPE pipe size for a specified design flow and a chosen maximum average velocity.
-- **FA:** انتخاب اولیه یک سایز لوله HDPE برای یک دبی طراحی مشخص و حداکثر سرعت متوسط انتخاب‌شده.
-- **EN:** Comparing available PE80/PE100 and SDR catalogue options and reviewing the velocity of alternative ODs.
-- **FA:** مقایسه گزینه‌های موجود PE80/PE100 و SDR و بررسی سرعت در قطرهای خارجی جایگزین.
-- **EN:** Early-stage sizing, option screening, engineering education and preparation of a shortlist for later hydraulic verification.
-- **FA:** سایزینگ اولیه، غربالگری گزینه‌ها، آموزش مهندسی و تهیه فهرست کوتاه برای کنترل هیدرولیکی بعدی.
-
-## Engineering scope and limitations | محدوده مهندسی و محدودیت‌ها
-**What this tool actually checks | مواردی که برنامه بررسی می‌کند**
-- A single flow rate through one candidate pipe bore at a time. | یک دبی مشخص در هر بار بررسی یک قطر داخلی.
-- Nominal ID derived from catalogue OD and nominal wall thickness, then average velocity. | قطر داخلی اسمی حاصل از OD و ضخامت اسمی و سپس سرعت متوسط.
-- The smallest available OD within the selected grade/SDR that meets the target velocity. | کوچک‌ترین OD موجود در گرید و SDR انتخابی که شرط سرعت را برآورده کند.
-
-**Not covered by this tool | موارد خارج از محدوده**
-- It does not calculate pressure loss, TDH, pump duty, energy consumption or the operating point of a pump. | افت فشار، TDH، وظیفه پمپ، مصرف انرژی یا نقطه کار پمپ را محاسبه نمی‌کند.
-- It does not design a route made of several pipe sections with different diameters, elevations, fittings or branches. | مسیر چندبخشی با قطرهای متفاوت، ارتفاع‌های مختلف، اتصالات و انشعاب‌ها را طراحی نمی‌کند.
-- It does not verify pressure class for temperature derating, surge/water hammer, fatigue, external loads, burial, supports, chemical compatibility or joining method. | کلاس فشار را با لحاظ کاهش فشار مجاز دما، ضربه قوچ، خستگی، بار خارجی، دفن، تکیه‌گاه، سازگاری شیمیایی یا روش اتصال تأیید نمی‌کند.
-- Nominal dimensions and database status are not a substitute for the current controlled standard and the exact manufacturer's datasheet. | ابعاد اسمی و وضعیت بانک جایگزین نسخه کنترل‌شده استاندارد و دیتاشیت همان سازنده نیستند.
-
-**Practical rule | قاعده عملی:** Use this selector to shortlist a pipe size. Before procurement or construction, verify actual dimensions, pressure rating at operating temperature, surge, hydraulic losses and manufacturer availability. For a line with multiple diameters, size each segment separately and complete a system hydraulic calculation in an appropriate tool.
+Detailed guides are available in the docs directory.
