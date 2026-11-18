@@ -137,3 +137,48 @@ python -m unittest discover -s tests -v
 - برنامه در نسخه فعلی افت فشار، منحنی پمپ، ضربه قوچ، سازگاری شیمیایی، شرایط نصب، بارهای سازه‌ای یا موجودی واقعی سازنده را کنترل نمی‌کند.
 
 بنابراین خروجی را برای غربالگری اولیه گزینه‌ها استفاده کنید؛ تأیید نهایی قطر و کلاس فشاری باید با محاسبات هیدرولیکی و مدارک فنی پروژه انجام شود.
+
+
+---
+
+# English User Guide | راهنمای انگلیسی
+
+## Purpose
+This command-line application performs preliminary HDPE pipe sizing based on a user-specified flow rate and target average velocity. It filters the pipe database by PE grade and SDR, calculates nominal internal diameter from outside diameter and nominal wall thickness, and selects the smallest available OD that meets the velocity target.
+
+## Run
+```bash
+python main.py
+python -m unittest discover -s tests -v
+```
+
+## Input sequence
+1. Enter flow rate in m³/h.
+2. Enter target average velocity in m/s.
+3. Enter EC in mS/cm (already compensated to 25°C) and actual water temperature in °C. These are optional fluid-property screening values in purpose, but the current CLI requests them. They do not affect the velocity-based diameter recommendation.
+4. Select PE80 or PE100 from the database menu.
+5. Select an SDR available for that grade.
+6. Review the recommended pipe and ranked catalogue alternatives.
+
+## Equations
+`Q(m³/s)=Q(m³/h)/3600`
+`ID(mm)=OD(mm)-2×wall thickness(mm)`
+`A=π(ID/1000)²/4`
+`V=Q/A`
+
+The smallest available OD whose nominal calculated velocity is no greater than the target is selected. If no available record meets the target, the largest available record is returned with a warning.
+
+## Database scope
+The generic reference database currently contains 506 records, with PE80 and PE100 grade/SDR combinations and OD values extending to 3000 mm where records are available. The exact menu is read from the JSON database; not every grade has every SDR or OD.
+
+## Suitable applications
+Use the selector for preliminary sizing of one pipe segment at one design flow, comparing catalogue sizes and preparing alternatives for hydraulic verification.
+
+## Limitations
+- One flow and one candidate pipe bore are evaluated at a time; the tool does not assemble a multi-diameter route or branched network.
+- It checks average velocity only. It does not calculate pressure loss, pump TDH, pump curves, energy, surge/water hammer or transient behaviour.
+- It does not certify pressure class at operating temperature or include project-specific design factors, chemical compatibility, external loads, burial, supports, joining or manufacturer stock.
+- Nominal ID is based on nominal dimensions. Several generic wall-thickness records are ratio-derived/estimated and must be verified against the controlled standard or the exact manufacturer's catalogue.
+- EC-based fluid properties are estimates and do not change the velocity-only sizing result.
+
+Treat the result as a preliminary catalogue shortlist, not an approved construction or procurement specification.
