@@ -1,79 +1,27 @@
-# Engineering Guide | راهنمای مهندسی
-## HDPE Pipe Diameter Selector | انتخاب‌گر قطر لوله HDPE
+# راهنمای مهندسی انتخاب‌گر قطر HDPE
 
-## 1. Scope and intended use | دامنه و کاربرد
-**EN:** This application performs preliminary velocity-based sizing of PE pressure pipes using documented OD, SDR and nominal wall-thickness records. It is a screening and learning tool, not a complete pipeline design package.
+## بخش فارسی
 
-**FA:** این برنامه انتخاب اولیه لوله‌های فشاری پلی‌اتیلن را بر اساس سرعت انجام می‌دهد و از رکوردهای مستند OD، SDR و ضخامت اسمی استفاده می‌کند. ابزار غربالگری و آموزشی است، نه نرم‌افزار کامل طراحی خط لوله.
+دبی و سرعت هدف ورودی‌های اصلی هستند. برنامه گزینه‌های گرید و SDR را از بانک می‌خواند، ضخامت اسمی را استخراج می‌کند، قطر داخلی را از رابطه ID=OD−2e به دست می‌آورد و سرعت متوسط را محاسبه می‌کند.
 
-## 2. Required inputs | ورودی‌های لازم
-- Flow rate in m³/h | دبی بر حسب مترمکعب بر ساعت
-- Target average velocity in m/s | سرعت متوسط هدف بر حسب متر بر ثانیه
-- PE grade (PE80/PE100) | گرید ماده
-- SDR available for that grade | SDR موجود برای گرید انتخابی
-- Optional EC and operating temperature for fluid screening | EC و دمای آب برای تخمین خواص سیال
+### مثال
+برای Q=50 m³/h و V=1.50 m/s قطر داخلی نظری حداقل 108.6 mm است. گزینه OD125 با ضخامت 11.4 mm سرعتی حدود 1.69 m/s دارد و رد می‌شود. گزینه OD140 با ضخامت 12.7 mm سرعتی حدود 1.35 m/s دارد و مناسب است. اعداد نمونه‌اند و نتیجه واقعی تابع رکورد بانک است.
 
-The current command-line interface asks for EC and temperature as part of the optional estimate. These values do not alter the velocity-only diameter selection for a specified flow rate and bore.
+### کاربردها
+سایزینگ اولیه یک بخش لوله، مقایسه گرید و SDR و تهیه فهرست گزینه‌ها برای کنترل هیدرولیکی بعدی.
 
-در نسخه فعلی CLI، EC و دما برای تخمین خواص پرسیده می‌شوند؛ اما برای دبی و قطر داخلی مشخص، در انتخاب قطر مبتنی بر سرعت نقشی ندارند.
+### محدودیت‌ها
+این ابزار افت فشار، TDH، توان پمپ، ضربه قوچ، فشار مجاز دمایی یا بارهای سازه‌ای را محاسبه نمی‌کند. شبکه شاخه‌دار و مسیر چندقطری را مدل نمی‌کند. ابعاد اسمی و ضخامت‌های تخمینی باید با استاندارد و کاتالوگ سازنده کنترل شوند.
 
-## 3. Geometry and equations | هندسه و روابط
-`ID = OD - 2e`; `A = π ID²/4`; `V = (Q/3600)/A`.
+## English Section
 
-OD and e must use the same length unit. Convert millimetres to metres before calculating area. The database supplies nominal wall thickness; the program does not infer actual measured bore.
+This selector takes design flow and target velocity, filters the dimensional database by grade and SDR, calculates nominal ID from ID=OD−2e and evaluates average velocity.
 
-قطر خارجی و ضخامت باید هم‌واحد باشند. پیش از محاسبه سطح مقطع، میلی‌متر به متر تبدیل می‌شود. ضخامت از بانک خوانده می‌شود و قطر داخلی واقعی اندازه‌گیری نمی‌شود.
+### Worked example
+For Q=50 m³/h and V=1.50 m/s, the theoretical minimum ID is 108.6 mm. An OD125 record with 11.4 mm wall gives about 1.69 m/s and fails. An OD140 record with 12.7 mm wall gives about 1.35 m/s and complies. Values are illustrative; actual output depends on database records.
 
-## 4. Selection logic | منطق انتخاب
-**EN:** Candidate records are filtered by grade and SDR, sorted by OD, and evaluated. The first (smallest) candidate with velocity ≤ target is selected. If none complies, the largest candidate is returned with a warning.
+### Suitable applications
+Preliminary sizing of one pipe segment, comparing grades and SDRs, and preparing candidate sizes for subsequent hydraulic checks.
 
-**FA:** رکوردها بر اساس گرید و SDR فیلتر و بر اساس OD مرتب می‌شوند. کوچک‌ترین گزینه‌ای که سرعت آن از هدف بیشتر نباشد انتخاب می‌شود. اگر هیچ گزینه‌ای منطبق نباشد، بزرگ‌ترین سایز همراه هشدار گزارش می‌شود.
-
-## 5. Worked example | مثال مرحله‌به‌مرحله
-Given Q=50 m³/h and Vtarget=1.50 m/s:
-- Q = 50/3600 = 0.013889 m³/s
-- Required area = 0.013889/1.50 = 0.009259 m²
-- Required ID = √(4×0.009259/π) ≈ 0.1086 m = 108.6 mm
-
-برای PE100 SDR11، فرض کنید رکورد OD125 دارای ضخامت اسمی حدود 11.4 mm باشد: ID≈102.2 mm و V≈1.69 m/s، پس مردود است. رکورد OD140 با ضخامت حدود 12.7 mm: ID≈114.6 mm و V≈1.35 m/s، پس قابل قبول است. انتخاب نهایی باید از رکورد واقعی موجود در فایل بانک گرفته شود.
-
-## 6. Understanding the output | تفسیر خروجی
-- Grade and SDR identify the selected material/dimensional series | گرید و SDR مشخصات ماده و سری ابعادی را نشان می‌دهند.
-- OD and wall thickness are nominal catalogue values | OD و ضخامت، مقادیر اسمی کاتالوگ‌اند.
-- ID is calculated nominal bore | ID قطر داخلی اسمی محاسبه‌شده است.
-- Calculated velocity is the average bulk velocity | سرعت، سرعت متوسط جریان است.
-- PN is a reference pressure class, not a complete pressure-design approval | PN کلاس فشاری مرجع است، نه تأیید نهایی طراحی فشار.
-
-## 7. Data quality and engineering cautions | کیفیت داده و ملاحظات
-The generic dataset contains 506 records. Some wall thicknesses are ratio-derived or rounded estimates. Check records marked for review against ISO 4427-2 and the controlled manufacturer catalogue. Manufacturer-specific GF catalogue records are separate from generic reference records; do not mix their tolerances or fitting data without checking the source.
-
-بانک عمومی شامل ۵۰۶ رکورد است. بعضی ضخامت‌ها از نسبت SDR استخراج یا گرد شده‌اند. رکوردهای نیازمند بررسی باید با ISO 4427-2 و کاتالوگ کنترل‌شده سازنده تطبیق داده شوند. داده‌های اختصاصی GF از داده‌های عمومی جدا هستند؛ تلرانس‌ها و اتصالات این دو منبع را بدون بررسی منبع با هم ترکیب نکنید.
-
-## 8. Worked example interpretation | جمع‌بندی مثال
-The 108.6 mm value is the theoretical minimum bore for the selected flow and target velocity. The selected catalogue bore must be at least this large. A larger bore lowers velocity but may affect cost, availability, fittings and hydraulic operating conditions. The final selection should also be checked for pressure class, temperature, surge, installation and economic constraints.
-
-قطر ۱۰۸٫۶ میلی‌متر حداقل قطر داخلی نظری برای دبی و سرعت هدف است. قطر داخلی اسمی گزینه انتخابی باید حداقل به این مقدار برسد. قطر بزرگ‌تر سرعت را کم می‌کند، اما هزینه، دسترسی، اتصالات و شرایط هیدرولیکی را نیز تغییر می‌دهد. کلاس فشار، دما، ضربه قوچ، نصب و اقتصاد پروژه باید جداگانه بررسی شوند.
-
-## 9. Tests | آزمون‌ها
-Run from the repository root:
-```bash
-python -m unittest discover -s tests -v
-```
-Tests validate implemented software logic; they do not certify a manufacturer's product or replace engineering review.
-
-## 14. Suitable applications and decision boundary | موارد کاربرد و مرز استفاده
-**EN:** Use this program when the question is: “For this one design flow, which available PE grade/SDR/OD gives an average velocity no higher than my selected target?” It is particularly useful for comparing catalogue sizes before detailed design.
-
-**FA:** زمانی از برنامه استفاده کنید که سؤال این باشد: «برای این دبی طراحی، کدام ترکیب گرید PE، SDR و OD موجود، سرعت متوسطی کمتر یا مساوی سرعت هدف ایجاد می‌کند؟» این ابزار برای مقایسه سایزهای کاتالوگی پیش از طراحی تفصیلی مناسب است.
-
-**Example | مثال:** For Q=50 m³/h and Vtarget=1.50 m/s, the theoretical minimum ID is about 108.6 mm. The catalogue selector then checks the available OD records for the selected grade and SDR and returns the smallest compliant record. This does not prove that the selected pipe has sufficient pressure rating or acceptable total system head.
-
-**FA:** برای دبی ۵۰ مترمکعب بر ساعت و سرعت هدف ۱٫۵۰ متر بر ثانیه، قطر داخلی نظری حداقل حدود ۱۰۸٫۶ میلی‌متر است. برنامه رکوردهای موجود گرید و SDR انتخابی را بررسی و کوچک‌ترین گزینه منطبق را برمی‌گرداند. این نتیجه به‌تنهایی کافی بودن کلاس فشار یا مناسب بودن هد کل سیستم را ثابت نمی‌کند.
-
-**Use another calculation or split the problem when | در شرایط زیر محاسبه تکمیلی یا تفکیک مسئله لازم است:**
-- The pipeline contains multiple sections with different diameters, flow rates or materials. | خط شامل چند بخش با قطر، دبی یا جنس متفاوت است.
-- A branched network divides or combines flow. | شبکه انشعابی است و دبی در گره‌ها تقسیم یا ترکیب می‌شود.
-- Pressure loss, pump head, energy, transient surge or pressure rating is a design requirement. | افت فشار، هد پمپ، انرژی، ضربه قوچ یا تأیید فشار طراحی لازم است.
-- The exact product dimensions or allowable pressure must be contractually verified. | ابعاد دقیق محصول یا فشار مجاز باید از نظر قراردادی تأیید شود.
-
-For a multi-section line, use the selector separately for each segment using that segment's design flow and target velocity, then verify the complete system with a hydraulic model. Do not treat a velocity-based diameter recommendation as a complete pipeline design.
+### Limitations
+The tool does not calculate pressure loss, TDH, pump power, water hammer, temperature-derated pressure rating or structural loads. It does not model branched networks or multi-diameter routes. Nominal dimensions and estimated wall thicknesses must be checked against standards and manufacturer catalogues.
