@@ -85,3 +85,25 @@ Nominal ID is calculated from nominal OD and wall thickness; actual bore varies 
 See [the bilingual engineering guide](docs/ENGINEERING_GUIDE_FA_EN.md) and the supporting documents in `docs/`.
 
 راهنمای جامع دوزبانه و فایل‌های آموزشی تکمیلی در پوشه `docs` قرار دارند.
+
+## Suitable applications | موارد کاربرد مناسب
+- **EN:** Preliminary selection of one HDPE pipe size for a specified design flow and a chosen maximum average velocity.
+- **FA:** انتخاب اولیه یک سایز لوله HDPE برای یک دبی طراحی مشخص و حداکثر سرعت متوسط انتخاب‌شده.
+- **EN:** Comparing available PE80/PE100 and SDR catalogue options and reviewing the velocity of alternative ODs.
+- **FA:** مقایسه گزینه‌های موجود PE80/PE100 و SDR و بررسی سرعت در قطرهای خارجی جایگزین.
+- **EN:** Early-stage sizing, option screening, engineering education and preparation of a shortlist for later hydraulic verification.
+- **FA:** سایزینگ اولیه، غربالگری گزینه‌ها، آموزش مهندسی و تهیه فهرست کوتاه برای کنترل هیدرولیکی بعدی.
+
+## Engineering scope and limitations | محدوده مهندسی و محدودیت‌ها
+**What this tool actually checks | مواردی که برنامه بررسی می‌کند**
+- A single flow rate through one candidate pipe bore at a time. | یک دبی مشخص در هر بار بررسی یک قطر داخلی.
+- Nominal ID derived from catalogue OD and nominal wall thickness, then average velocity. | قطر داخلی اسمی حاصل از OD و ضخامت اسمی و سپس سرعت متوسط.
+- The smallest available OD within the selected grade/SDR that meets the target velocity. | کوچک‌ترین OD موجود در گرید و SDR انتخابی که شرط سرعت را برآورده کند.
+
+**Not covered by this tool | موارد خارج از محدوده**
+- It does not calculate pressure loss, TDH, pump duty, energy consumption or the operating point of a pump. | افت فشار، TDH، وظیفه پمپ، مصرف انرژی یا نقطه کار پمپ را محاسبه نمی‌کند.
+- It does not design a route made of several pipe sections with different diameters, elevations, fittings or branches. | مسیر چندبخشی با قطرهای متفاوت، ارتفاع‌های مختلف، اتصالات و انشعاب‌ها را طراحی نمی‌کند.
+- It does not verify pressure class for temperature derating, surge/water hammer, fatigue, external loads, burial, supports, chemical compatibility or joining method. | کلاس فشار را با لحاظ کاهش فشار مجاز دما، ضربه قوچ، خستگی، بار خارجی، دفن، تکیه‌گاه، سازگاری شیمیایی یا روش اتصال تأیید نمی‌کند.
+- Nominal dimensions and database status are not a substitute for the current controlled standard and the exact manufacturer's datasheet. | ابعاد اسمی و وضعیت بانک جایگزین نسخه کنترل‌شده استاندارد و دیتاشیت همان سازنده نیستند.
+
+**Practical rule | قاعده عملی:** Use this selector to shortlist a pipe size. Before procurement or construction, verify actual dimensions, pressure rating at operating temperature, surge, hydraulic losses and manufacturer availability. For a line with multiple diameters, size each segment separately and complete a system hydraulic calculation in an appropriate tool.
