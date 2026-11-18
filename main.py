@@ -51,7 +51,7 @@ def main() -> None:
     ec = read_positive_float("Electrical conductivity EC (mS/cm, compensated to 25 °C): ")
     temperature = read_positive_float("Water temperature (°C): ")
     try:
-        fluid = estimate_from_ec(ec, temperature, tds_factor=0.65)
+        fluid = estimate_from_ec(ec, temperature)
     except ValueError as exc:
         print(f"Fluid-property input error: {exc}")
         return
