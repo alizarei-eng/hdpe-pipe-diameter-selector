@@ -10,17 +10,14 @@
 ۵. SDR موجود برای گرید را انتخاب کنید.
 ۶. سایز پیشنهادی و گزینه‌های جایگزین را بررسی کنید.
 
-### اجرای برنامه
+### اجرا
 ```bash
 python main.py
 python -m unittest discover -s tests -v
 ```
 
-### تفسیر
-برنامه کوچک‌ترین OD موجود را که سرعت محاسبه‌شده آن از سرعت هدف بیشتر نباشد انتخاب می‌کند. اگر هیچ سایزی شرط را برآورده نکند، بزرگ‌ترین گزینه همراه هشدار گزارش می‌شود.
-
-### محدودیت
-این خروجی انتخاب اولیه بر اساس سرعت است؛ تأیید فشار مجاز، افت فشار، ضربه قوچ و طراحی کامل خط نیست.
+### تفسیر و محدودیت
+برنامه کوچک‌ترین OD موجود را که سرعت آن از هدف بیشتر نباشد انتخاب می‌کند. اگر هیچ سایزی شرط را برآورده نکند، بزرگ‌ترین گزینه همراه هشدار گزارش می‌شود. این خروجی انتخاب اولیه بر اساس سرعت است، نه تأیید فشار مجاز یا طراحی کامل خط.
 
 ## English Section
 
@@ -38,8 +35,5 @@ python main.py
 python -m unittest discover -s tests -v
 ```
 
-### Interpretation
-The program selects the smallest available OD whose calculated velocity does not exceed the target. If no size complies, the largest available option is reported with a warning.
-
-### Limitation
-This is a preliminary velocity-based selection, not verification of pressure rating, pressure loss, water hammer or complete pipeline design.
+### Interpretation and limitation
+The program selects the smallest available OD whose calculated velocity does not exceed the target. If no size complies, the largest available option is reported with a warning. This is a preliminary velocity-based selection, not pressure-rating verification or complete pipeline design.
