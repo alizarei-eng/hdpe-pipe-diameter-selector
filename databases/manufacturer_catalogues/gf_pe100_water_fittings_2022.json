@@ -1,0 +1,1083 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "GF_PE100_WATER_FITTINGS_2022",
+  "description": "Manufacturer-specific PE100 water utility fitting data transcribed from GF India PE Systems Water Utility catalogue. Not a universal dimensional standard.",
+  "units": {
+    "diameter": "mm",
+    "dimensions": "mm",
+    "weight": "kg",
+    "pressure": "bar"
+  },
+  "source": {
+    "source_id": "GF_PE_SYSTEMS_WATER_UTILITY_INDIA",
+    "publisher": "GF Piping Systems India",
+    "document_title": "PE Systems — Water Utility",
+    "source_url": "https://www.gfps.com/content/dam/gfps/in/product-ranges/gf-in-catalog-pe-systems-water-utility-en.pdf",
+    "document_revision": "catalogue accessed 2026; revision not stated in extracted cover",
+    "pages": {
+      "couplers": [
+        14,
+        15
+      ],
+      "electrofusion_fittings": [
+        16,
+        17,
+        18
+      ],
+      "tapping_saddles": [
+        20
+      ]
+    },
+    "notes": [
+      "Product codes, dimensions and weights are direct catalogue transcriptions.",
+      "Catalogue lists PE100 SDR11 electrofusion fittings at 16 bar water; coupler SDR17 data is separately identified. Do not assume all products have identical pressure class.",
+      "Tapping saddle data is for the stated monoline bottom-belt product and cutter size 8 mm; outlet diameters are not the main-pipe diameters.",
+      "A product not listed in this dataset is not proof of non-availability from GF or other manufacturers."
+    ]
+  },
+  "summary": {
+    "record_count": 47,
+    "material_grade": "PE100",
+    "application": "water utility",
+    "connection_methods": [
+      "electrofusion"
+    ],
+    "fitting_types": [
+      "electrofusion_coupler",
+      "electrofusion_elbow_90",
+      "electrofusion_tee_90_equal_with_fixation",
+      "electrofusion_tee_90_equal",
+      "electrofusion_reducer_with_fixation",
+      "tapping_saddle_monoline_cutter_8mm"
+    ],
+    "main_diameter_min_mm": 20,
+    "main_diameter_max_mm": 315,
+    "sdr_values": [
+      11,
+      17
+    ]
+  },
+  "fittings": [
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 20,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 945",
+      "dimensions_mm": {
+        "d1": 31,
+        "L": 67
+      },
+      "weight_kg": 0.046,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 32,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 946",
+      "dimensions_mm": {
+        "d1": 44,
+        "L": 72
+      },
+      "weight_kg": 0.07,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 50,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 445",
+      "dimensions_mm": {
+        "d1": 66,
+        "L": 88
+      },
+      "weight_kg": 0.131,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 63,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 947",
+      "dimensions_mm": {
+        "d1": 80,
+        "L": 95
+      },
+      "weight_kg": 0.19,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 75,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 447",
+      "dimensions_mm": {
+        "d1": 95,
+        "L": 110
+      },
+      "weight_kg": 0.295,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 90,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 948",
+      "dimensions_mm": {
+        "d1": 113,
+        "L": 125
+      },
+      "weight_kg": 0.42,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 110,
+      "branch_diameter_mm": null,
+      "product_code": "753911614E",
+      "dimensions_mm": {
+        "d1": 138,
+        "L": 145
+      },
+      "weight_kg": 0.691,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 125,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 949",
+      "dimensions_mm": {
+        "d1": 154,
+        "L": 156
+      },
+      "weight_kg": 0.72,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 140,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 451",
+      "dimensions_mm": {
+        "d1": 172,
+        "L": 168
+      },
+      "weight_kg": 1.05,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 160,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 950",
+      "dimensions_mm": {
+        "d1": 196,
+        "L": 180
+      },
+      "weight_kg": 1.38,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 180,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 951",
+      "dimensions_mm": {
+        "d1": 219,
+        "L": 194
+      },
+      "weight_kg": 1.83,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 200,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 454",
+      "dimensions_mm": {
+        "d1": 245,
+        "L": 208
+      },
+      "weight_kg": 2.434,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 225,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 455",
+      "dimensions_mm": {
+        "d1": 273,
+        "L": 224
+      },
+      "weight_kg": 3.192,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 250,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 456",
+      "dimensions_mm": {
+        "d1": 304,
+        "L": 247
+      },
+      "weight_kg": 4.392,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 280,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 457",
+      "dimensions_mm": {
+        "d1": 340,
+        "L": 252
+      },
+      "weight_kg": 5.69,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 315,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 458",
+      "dimensions_mm": {
+        "d1": 382,
+        "L": 268
+      },
+      "weight_kg": 7.438,
+      "source_page": 14,
+      "source_table": "Coupler PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 17,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 180,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 477",
+      "dimensions_mm": {
+        "d1": 208,
+        "L": 194
+      },
+      "weight_kg": 1.304,
+      "source_page": 15,
+      "source_table": "Coupler PE100 SDR17",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 17,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 200,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 478",
+      "dimensions_mm": {
+        "d1": 231,
+        "L": 208
+      },
+      "weight_kg": 1.732,
+      "source_page": 15,
+      "source_table": "Coupler PE100 SDR17",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 17,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 225,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 479",
+      "dimensions_mm": {
+        "d1": 260,
+        "L": 224
+      },
+      "weight_kg": 2.282,
+      "source_page": 15,
+      "source_table": "Coupler PE100 SDR17",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 17,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 250,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 480",
+      "dimensions_mm": {
+        "d1": 289,
+        "L": 247
+      },
+      "weight_kg": 3.156,
+      "source_page": 15,
+      "source_table": "Coupler PE100 SDR17",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 17,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 280,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 481",
+      "dimensions_mm": {
+        "d1": 323,
+        "L": 252
+      },
+      "weight_kg": 4.088,
+      "source_page": 15,
+      "source_table": "Coupler PE100 SDR17",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_coupler",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 17,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 315,
+      "branch_diameter_mm": null,
+      "product_code": "300 212 482",
+      "dimensions_mm": {
+        "d1": 364,
+        "L": 268
+      },
+      "weight_kg": 5.528,
+      "source_page": 15,
+      "source_table": "Coupler PE100 SDR17",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": "Catalogue states 16 bar water; verify product variant and local availability."
+    },
+    {
+      "fitting_type": "electrofusion_elbow_90",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 75,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 035",
+      "dimensions_mm": {
+        "d1": 97,
+        "L": 94,
+        "L1": 54,
+        "Z": 40
+      },
+      "weight_kg": 0.415,
+      "source_page": 16,
+      "source_table": "Elbow 90 PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_elbow_90",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 90,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 973",
+      "dimensions_mm": {
+        "d1": 115,
+        "L": 122,
+        "L1": 62,
+        "Z": 60
+      },
+      "weight_kg": 0.828,
+      "source_page": 16,
+      "source_table": "Elbow 90 PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_elbow_90",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 110,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 037",
+      "dimensions_mm": {
+        "d1": 140,
+        "L": 147,
+        "L1": 72,
+        "Z": 76
+      },
+      "weight_kg": 1.224,
+      "source_page": 16,
+      "source_table": "Elbow 90 PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_elbow_90",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 125,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 974",
+      "dimensions_mm": {
+        "d1": 160,
+        "L": 155,
+        "L1": 77,
+        "Z": 68
+      },
+      "weight_kg": 1.742,
+      "source_page": 16,
+      "source_table": "Elbow 90 PE100 SDR11",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_tee_90_equal_with_fixation",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 20,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 965",
+      "dimensions_mm": {
+        "d1": 35,
+        "L": 88,
+        "L1": 32,
+        "z": 11,
+        "z1": 92,
+        "H": 67
+      },
+      "weight_kg": 0.085,
+      "source_page": 17,
+      "source_table": "Tee 90 equal with integral pipe fixation",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_tee_90_equal_with_fixation",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 32,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 966",
+      "dimensions_mm": {
+        "d1": 44,
+        "L": 102,
+        "L1": 34,
+        "z": 15,
+        "z1": 100,
+        "H": 74
+      },
+      "weight_kg": 0.118,
+      "source_page": 17,
+      "source_table": "Tee 90 equal with integral pipe fixation",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_tee_90_equal_with_fixation",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 63,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 967",
+      "dimensions_mm": {
+        "d1": 81,
+        "L": 151,
+        "L1": 46,
+        "z": 28,
+        "z1": 150,
+        "H": 102
+      },
+      "weight_kg": 0.407,
+      "source_page": 17,
+      "source_table": "Tee 90 equal with integral pipe fixation",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_tee_90_equal",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 75,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 045",
+      "dimensions_mm": {
+        "d1": 97,
+        "L": 178,
+        "L1": 54,
+        "H": 87,
+        "z": 35,
+        "z1": 143
+      },
+      "weight_kg": 0.569,
+      "source_page": 17,
+      "source_table": "Tee 90 equal",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_tee_90_equal",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 90,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 968",
+      "dimensions_mm": {
+        "d1": 115,
+        "L": 205,
+        "L1": 62,
+        "H": 94,
+        "z": 41,
+        "z1": 161
+      },
+      "weight_kg": 0.891,
+      "source_page": 17,
+      "source_table": "Tee 90 equal",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_tee_90_equal",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 110,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 047",
+      "dimensions_mm": {
+        "d1": 140,
+        "L": 255,
+        "L1": 72,
+        "H": 104,
+        "z": 56,
+        "z1": 184
+      },
+      "weight_kg": 1.576,
+      "source_page": 17,
+      "source_table": "Tee 90 equal",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_tee_90_equal",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 125,
+      "branch_diameter_mm": null,
+      "product_code": "300 220 969",
+      "dimensions_mm": {
+        "d1": 161,
+        "L": 276,
+        "L1": 78,
+        "H": 113,
+        "z": 60,
+        "z1": 207
+      },
+      "weight_kg": 2.212,
+      "source_page": 17,
+      "source_table": "Tee 90 equal",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_reducer_with_fixation",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 32,
+      "branch_diameter_mm": 20,
+      "product_code": "300 220 981",
+      "dimensions_mm": {
+        "d1": 44,
+        "d2": 20,
+        "L": 80,
+        "L1": 33,
+        "L2": 39,
+        "z": 8
+      },
+      "weight_kg": 0.06,
+      "source_page": 18,
+      "source_table": "Reducer with integral pipe fixation",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "electrofusion_reducer_with_fixation",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 63,
+      "branch_diameter_mm": 32,
+      "product_code": "300 220 982",
+      "dimensions_mm": {
+        "d1": 80,
+        "d2": 32,
+        "L": 105,
+        "L1": 35,
+        "L2": 51,
+        "z": 19
+      },
+      "weight_kg": 0.17,
+      "source_page": 18,
+      "source_table": "Reducer with integral pipe fixation",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 32,
+      "branch_diameter_mm": 20,
+      "product_code": "300 220 952",
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 94,
+        "H1": 38,
+        "L": 100,
+        "L1": 75,
+        "Z": 89,
+        "ss304_code": null,
+        "brass_code": "300 220 952",
+        "group_pack_qty": 10
+      },
+      "weight_kg": 0.164,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 50,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 138,
+        "H1": 65,
+        "L": 145,
+        "L1": 53,
+        "Z": 114,
+        "ss304_code": "300 210 620",
+        "brass_code": null,
+        "group_pack_qty": 30
+      },
+      "weight_kg": 0.423,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 63,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 145,
+        "H1": 71,
+        "L": 175,
+        "L1": 53,
+        "Z": 114,
+        "ss304_code": "300 210 625",
+        "brass_code": null,
+        "group_pack_qty": 25
+      },
+      "weight_kg": 0.479,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 75,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 171,
+        "H1": 81,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 633",
+        "brass_code": null,
+        "group_pack_qty": 22
+      },
+      "weight_kg": 0.481,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 90,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 189,
+        "H1": 93,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 641",
+        "brass_code": null,
+        "group_pack_qty": 20
+      },
+      "weight_kg": 0.583,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 110,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 199,
+        "H1": 103,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 649",
+        "brass_code": null,
+        "group_pack_qty": 16
+      },
+      "weight_kg": 0.631,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 125,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 207,
+        "H1": 111,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 657",
+        "brass_code": null,
+        "group_pack_qty": 15
+      },
+      "weight_kg": 0.653,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 140,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 216,
+        "H1": 120,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 971",
+        "brass_code": null,
+        "group_pack_qty": 12
+      },
+      "weight_kg": 0.713,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 160,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 224,
+        "H1": 128,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 665",
+        "brass_code": null,
+        "group_pack_qty": 10
+      },
+      "weight_kg": 0.783,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 180,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 234,
+        "H1": 138,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 673",
+        "brass_code": null,
+        "group_pack_qty": 10
+      },
+      "weight_kg": 0.823,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 200,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 244,
+        "H1": 148,
+        "L": 175,
+        "L1": 64,
+        "Z": 121,
+        "ss304_code": "300 210 681",
+        "brass_code": null,
+        "group_pack_qty": 10
+      },
+      "weight_kg": 0.895,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    },
+    {
+      "fitting_type": "tapping_saddle_monoline_cutter_8mm",
+      "connection_method": "electrofusion",
+      "material": "PE100",
+      "sdr": 11,
+      "pressure_rating_bar": 16,
+      "main_diameter_mm": 225,
+      "branch_diameter_mm": 20,
+      "product_code": null,
+      "dimensions_mm": {
+        "outlet_diameter": 20,
+        "H": 257,
+        "H1": 161,
+        "L": 175,
+        "L1": 59,
+        "Z": 121,
+        "ss304_code": "300 210 689",
+        "brass_code": null,
+        "group_pack_qty": 8
+      },
+      "weight_kg": 1.003,
+      "source_page": 20,
+      "source_table": "Monoline tapping saddle with bottom belt cutter 8 mm",
+      "record_status": "transcribed_manufacturer_catalogue",
+      "availability_note": null
+    }
+  ]
+}
