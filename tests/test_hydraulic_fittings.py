@@ -14,8 +14,8 @@ class TestHydraulicFittingReferences(unittest.TestCase):
             cls.data = json.load(file)
         cls.fittings = cls.data["fittings"]
 
-    def find(self, fitting_type):
-        matches = [item for item in self.fittings if item["fitting_type"] == fitting_type]
+    def find(self, fitting_type, flow_path=None):
+        matches = [item for item in self.fittings if item["fitting_type"] == fitting_type and (flow_path is None or item["flow_path"] == flow_path)]
         self.assertEqual(len(matches), 1)
         return matches[0]
 
@@ -29,7 +29,7 @@ class TestHydraulicFittingReferences(unittest.TestCase):
         self.assertAlmostEqual(self.find("elbow_45")["k"], 0.4)
 
     def test_tee_flow_paths_are_separate(self):
-        straight = self.find("tee")
+        straight = self.find("tee", "straight_run")
         branch = [item for item in self.fittings if item["fitting_type"] == "tee" and item["flow_path"] == "branch_flow"]
         self.assertEqual(straight["flow_path"], "straight_run")
         self.assertAlmostEqual(straight["k"], 0.6)
