@@ -523,22 +523,6 @@
       "catalogue_id": "GF_UTILITY_SYSTEMS_2022",
       "material_grade": "PE100",
       "application": "water_supply",
-      "dn_od_mm": 20,
-      "mean_od_min_mm": 20,
-      "mean_od_max_mm": 20.3,
-      "max_out_of_roundness_mm": 1.2,
-      "sdr": 13.6,
-      "nominal_pressure_bar": 12.5,
-      "source_table": "Table 2: SDR21/17/13.6",
-      "source_page": 8,
-      "availability_note": null,
-      "record_status": "transcribed_manufacturer_catalogue"
-    },
-    {
-      "manufacturer": "GF Piping Systems Indonesia",
-      "catalogue_id": "GF_UTILITY_SYSTEMS_2022",
-      "material_grade": "PE100",
-      "application": "water_supply",
       "dn_od_mm": 25,
       "mean_od_min_mm": 25,
       "mean_od_max_mm": 25.3,
@@ -547,22 +531,6 @@
       "nominal_pressure_bar": 10,
       "minimum_wall_thickness_mm": 2,
       "average_mass_kg_m": 0.14,
-      "source_table": "Table 2: SDR21/17/13.6",
-      "source_page": 8,
-      "availability_note": null,
-      "record_status": "transcribed_manufacturer_catalogue"
-    },
-    {
-      "manufacturer": "GF Piping Systems Indonesia",
-      "catalogue_id": "GF_UTILITY_SYSTEMS_2022",
-      "material_grade": "PE100",
-      "application": "water_supply",
-      "dn_od_mm": 25,
-      "mean_od_min_mm": 25,
-      "mean_od_max_mm": 25.3,
-      "max_out_of_roundness_mm": 1.2,
-      "sdr": 13.6,
-      "nominal_pressure_bar": 12.5,
       "source_table": "Table 2: SDR21/17/13.6",
       "source_page": 8,
       "availability_note": null,
@@ -1969,7 +1937,7 @@
       "average_mass_kg_m": 215.7,
       "source_table": "Table 2: SDR21/17/13.6",
       "source_page": 8,
-      "availability_note": null,
+      "availability_note": "Asterisk in source: confirm availability with manufacturer.",
       "record_status": "transcribed_manufacturer_catalogue"
     },
     {
@@ -2005,7 +1973,7 @@
       "average_mass_kg_m": 250.5,
       "source_table": "Table 2: SDR21/17/13.6",
       "source_page": 8,
-      "availability_note": null,
+      "availability_note": "Asterisk in source: confirm availability with manufacturer.",
       "record_status": "transcribed_manufacturer_catalogue"
     },
     {
@@ -3247,7 +3215,7 @@
       "average_mass_kg_m": 125.1,
       "source_table": "Table 3: SDR11/9/7.4",
       "source_page": 9,
-      "availability_note": null,
+      "availability_note": "Asterisk in source: confirm availability with manufacturer.",
       "record_status": "transcribed_manufacturer_catalogue"
     },
     {
@@ -3283,7 +3251,7 @@
       "average_mass_kg_m": 159.2,
       "source_table": "Table 3: SDR11/9/7.4",
       "source_page": 9,
-      "availability_note": null,
+      "availability_note": "Asterisk in source: confirm availability with manufacturer.",
       "record_status": "transcribed_manufacturer_catalogue"
     },
     {
@@ -3301,7 +3269,7 @@
       "average_mass_kg_m": 168.1,
       "source_table": "Table 3: SDR11/9/7.4",
       "source_page": 9,
-      "availability_note": null,
+      "availability_note": "Asterisk in source: confirm availability with manufacturer.",
       "record_status": "transcribed_manufacturer_catalogue"
     },
     {
@@ -3319,6 +3287,42 @@
       "average_mass_kg_m": 213,
       "source_table": "Table 3: SDR11/9/7.4",
       "source_page": 9,
+      "availability_note": "Asterisk in source: confirm availability with manufacturer.",
+      "record_status": "transcribed_manufacturer_catalogue"
+    },
+    {
+      "manufacturer": "GF Piping Systems Indonesia",
+      "catalogue_id": "GF_UTILITY_SYSTEMS_2022",
+      "material_grade": "PE100",
+      "application": "water_supply",
+      "dn_od_mm": 20,
+      "mean_od_min_mm": 20,
+      "mean_od_max_mm": 20.3,
+      "max_out_of_roundness_mm": 1.2,
+      "sdr": 13.6,
+      "nominal_pressure_bar": 12.5,
+      "minimum_wall_thickness_mm": 1.6,
+      "average_mass_kg_m": 0.1,
+      "source_table": "Table 2: SDR21/17/13.6",
+      "source_page": 8,
+      "availability_note": null,
+      "record_status": "transcribed_manufacturer_catalogue"
+    },
+    {
+      "manufacturer": "GF Piping Systems Indonesia",
+      "catalogue_id": "GF_UTILITY_SYSTEMS_2022",
+      "material_grade": "PE100",
+      "application": "water_supply",
+      "dn_od_mm": 25,
+      "mean_od_min_mm": 25,
+      "mean_od_max_mm": 25.3,
+      "max_out_of_roundness_mm": 1.2,
+      "sdr": 13.6,
+      "nominal_pressure_bar": 12.5,
+      "minimum_wall_thickness_mm": 2,
+      "average_mass_kg_m": 0.14,
+      "source_table": "Table 2: SDR21/17/13.6",
+      "source_page": 8,
       "availability_note": null,
       "record_status": "transcribed_manufacturer_catalogue"
     }
