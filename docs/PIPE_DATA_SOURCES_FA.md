@@ -57,3 +57,16 @@ See `sources/source_register.json` for source URLs and scope. Key references:
 - Catalogue absence is not the same as non-manufacturability.
 - Local stock, brand availability, certificates and current production status must be confirmed with the supplier.
 - Use the current controlled standard and manufacturer datasheet for procurement, pressure design and construction documents.
+
+
+## PE fitting data
+
+The first manufacturer-specific fitting dataset is `databases/manufacturer_catalogues/gf_pe100_water_fittings_2022.json`. It transcribes GF India PE Systems — Water Utility catalogue entries for PE100 electrofusion couplers (SDR11 and SDR17), 90° elbows, equal 90° tees, reducers with integral pipe fixation, and 8 mm-cutter monoline tapping saddles. The records include the main/branch or outlet diameters, the dimensions actually shown in the source tables, product codes where published, weights, SDR/pressure notes, source page and transcription status.
+
+**Important interpretation rules:**
+
+- This is a manufacturer catalogue dataset, not the generic ISO 4427-3 dimensional database. ISO 4427-3:2019 defines requirements and test parameters for PE fittings; it does not mean every listed manufacturer product has identical geometry.
+- The catalogue identifies PE100 water electrofusion products, with product-specific SDR and pressure declarations. Do not transfer a 16 bar rating from one fitting family to another without checking its exact entry.
+- Tapping-saddle main diameter and branch/outlet diameter are different fields. The outlet is not the saddle's main-pipe size.
+- Missing product rows are not evidence of universal unavailability. Local stock and current product status require manufacturer confirmation.
+- Fitting dimensions are not automatically suitable as hydraulic loss coefficients. K-values or equivalent lengths require separate validated hydraulic data.
